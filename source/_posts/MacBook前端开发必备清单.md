@@ -56,7 +56,7 @@ tags: [技术, Mac, 记录, 前端, 效率]
 
 1. iTerm2 和 oh-my-zsh
 
-   此神仙组合能让你的终端好用一万倍🤩🤩🤩，详细配置文章看这里。
+   此神仙组合能让你的终端好用一万倍🤩🤩🤩，详细配置文章看这里：[终端体验提升计划-iTerm2-Oh-My-Zsh](./终端体验提升计划-iTerm2-Oh-My-Zsh.md)。
 
 2. [Homebrew](https://brew.sh/index_zh-cn)
 
