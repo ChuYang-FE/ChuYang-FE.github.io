@@ -1,6 +1,8 @@
 ---
 title: 终端体验提升计划-iTerm2 + Oh-My-Zsh
 date: 2021-04-04 16:39:25
+category: 
+- [技术]
 tags: [技术, 效率, Mac]
 ---
 
