@@ -37,3 +37,9 @@ tags: [技术, 效率, Mac]
    安装：
 
    `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+## 配置及使用
+
+1. iTerm2
+
+2. Oh-My-Zsh
