@@ -76,13 +76,15 @@ tags: [技术, Mac, 记录, 前端, 效率]
 
    3. 最后再将下载的安装包拖到「软件程序」文件夹或执行安装。
 
+   4. 清理安装包
+
    这也太麻烦了吧😅😅😅
 
    而使用Homebrew，你只需要在终端输入一行命令，就可以解决包括查找、下载和安装软件的一系列步骤。
 
    例如安装Chrome浏览器，你只需在终端输入：
 
-   `brew cask install google-chrome`
+   `brew install google-chrome`
 
    例如安装git：
 
@@ -90,7 +92,9 @@ tags: [技术, Mac, 记录, 前端, 效率]
 
    是不是非常简单快捷？👏👏👏
 
-   Homebrew的安装、换源、brew install 和 brew cask install 的具体说明请看这里
+   Homebrew的具体说明请看这里：
+
+   {% post_link Mac必备神器——Homebrew %}
 
 3. Alfred
 
