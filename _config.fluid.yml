@@ -821,7 +821,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  banner_img: /images/sky-airplane.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
