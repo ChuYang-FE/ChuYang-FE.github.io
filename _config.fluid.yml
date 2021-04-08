@@ -822,7 +822,7 @@ tag:
 about:
   enable: true
   banner_img: /images/sky-airplane.jpg
-  banner_img_height: 60
+  banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
   avatar: /images/about/avatar.JPG
