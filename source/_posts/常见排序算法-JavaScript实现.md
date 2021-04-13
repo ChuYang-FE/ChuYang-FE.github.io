@@ -80,6 +80,8 @@ function selectSort(array) {
 > 重点：部分有序。将无序部分和有序部分进行比较，然后插入对应位置。
 >
 > 首先要实现局部有序：直接把第一个元素看成有序。
+>
+> 数据规模越小、数据有序程度越高，越高效（移动少）
 
 ![插入排序](/images/algorithms/insert.gif)
 
@@ -96,6 +98,44 @@ function insertSort(array) {
         j--;
       }
     array[j + 1] = temp;
+  }
+  return array;
+}
+```
+
+## 希尔排序
+
+> 希尔排序是插入排序的改进。
+>
+> 当数据规模较大时或有序程度不高时，插入排序的元素移动次数较多，插入效率不高。为了解决这个问题，希尔排序出现了。
+>
+> 希尔排序把较大的数据集合分割成若干个小组（逻辑上分组），然后对每一个小组分别进行插入排序，此时，插入排序所作用的数据量比较小（每一个小组），插入的效率比较高。
+
+**实现过程**：先让数组中任意间隔为 gap 的元素有序，刚开始 gap 的大小可以是 gap = n / 2，接着让 gap = n / 4，让 gap 一直缩小，当 gap = 1 时，也就是此时数组中任意间隔为1的元素有序，此时的数组就是有序的了。
+
+![希尔排序](/images/algorithms/Shell.gif)
+
+代码实现：
+
+```js
+function shellSort(array) {
+  let len = array.length;
+  let gap = Math.floor(len / 2);
+  let temp;
+  while (gap > 0) { //gap不断减小
+
+    // 相当于一个有间隔的插入排序
+    for (let i = gap; i < len; i += gap) {
+      temp = array[i];
+      let j = i;
+      while (j >= gap && array[j - gap] > temp) {
+        array[j] = array[j - gap];
+        j -= gap;
+      }
+      array[j] = temp;
+    }
+
+    gap = Math.floor(gap / 2);
   }
   return array;
 }
