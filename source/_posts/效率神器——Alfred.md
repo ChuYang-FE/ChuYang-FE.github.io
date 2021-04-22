@@ -63,3 +63,62 @@ Alfred与Mac自带的“聚焦”有何区别呢？简单来说，Alfred就是�
    用法：`snip 关键词` ，输入关键字后，会自动弹出自定义内容。日常用法：每次写东西前习惯标个今天日期，可以自定义 `{date}` 即可代表今天。使用时，只需 `snip today` 然后回车，自动生成2021-04-22🤩
 
    ![身份证太长不想输咋办](/images/alfred/snp-id.png)
+
+4. 直接输入终端命令
+
+   不想每次打开终端再输入命令执行咋办？直接 `>命令` 了解一下🤩
+
+   ![直接执行命令](/images/alfred/alfred-terminal.png)
+
+   ![效果](/images/alfred/terminal-date.png)
+
+   注意，Alfred默认使用默认终端，若想使用 `iterm` ，可以在Alfred里选Terminal-“自定义”，配置如下：
+
+   ``` AppleScript
+      on alfred_script(q)
+        if application "iTerm2" is running or application "iTerm" is running then
+          run script "
+            on run {q}
+              tell application \"iTerm\"
+                activate
+                try
+                  select first window
+                  set onlywindow to true
+                on error
+                  create window with default profile
+                  select first window
+                  set onlywindow to true
+                end try
+                tell the first window
+                  if onlywindow is false then
+                    create tab with default profile
+                  end if
+                  tell current session to write text q
+                end tell
+              end tell
+            end run
+          " with parameters {q}
+        else
+          run script "
+            on run {q}
+              tell application \"iTerm\"
+                activate
+                try
+                  select first window
+                on error
+                  create window with default profile
+                  select first window
+                end try
+                tell the first window
+                  tell current session to write text q
+                end tell
+              end tell
+            end run
+          " with parameters {q}
+        end if
+      end alfred_script
+   ```
+
+## 总结
+
+更多其他常用功能及强大的Workflow日后继续补充，更多使用方法可参考 [Alfred官方](https://www.alfredapp.com/)~😎
