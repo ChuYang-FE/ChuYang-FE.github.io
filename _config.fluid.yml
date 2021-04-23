@@ -695,7 +695,7 @@ valine:
   placeholder: 说点什么
   path: window.location.pathname
   avatar: wavatar
-  meta: ['nick', 'mail']
+  meta: ['nick']
   pageSize: 10
   lang: zh-CN
   highlight: true
