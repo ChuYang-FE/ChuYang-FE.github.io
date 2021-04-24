@@ -804,7 +804,7 @@ category:
 tag:
   enable: true
   banner_img: /img/default.png
-  banner_img_height: 80
+  banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
   tagcloud:
@@ -821,19 +821,19 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /images/sky-airplane.jpg
+  banner_img: /images/about/sky-airplane.jpg
   banner_img_height: 80
-  banner_mask_alpha: 0.3
-  subtitle:
+  banner_mask_alpha: 0.2
+  subtitle: '关于羊小羊'
   avatar: /images/about/avatar.JPG
   name: "羊小羊 (ChuYang)"
   intro: "Knowledge is weightless, a treasure you can always carry easily."
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
+    - { class: "iconfont icon-wechat-fill", qrcode: "/images/about/wechat.jpg" }
     - { class: "iconfont icon-github-fill", link: "https://github.com/ChuYang-FE", tip: "羊小羊的GitHub" }
     # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/images/about/wechat.jpg" }
 
 
 #---------------------------
