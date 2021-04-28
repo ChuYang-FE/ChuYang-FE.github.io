@@ -234,3 +234,7 @@ gp|git push
 总的来说，平常用的 Markdown 语法主要是以上介绍的这些，已经足够应付日常的写作~
 
 如果以后有用到其他的语法，我会继续补充本文章滴~😎
+
+对了，补充一个 VS Code 插件 `Markdown All in One`， 可以实时预览~
+
+![Markdown All in One 插件实时预览](/images/markdown-profile.png)
