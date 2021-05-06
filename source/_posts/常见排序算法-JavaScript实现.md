@@ -3,7 +3,7 @@ title: 常见排序算法-JavaScript实现
 date: 2021-04-10 21:20:04
 category: 
 - [技术]
-tags: [技术, 手撕代码, JavaScript]
+tags: [技术, 算法, JavaScript]
 ---
 
 前几天偶尔看到了一些排序算法的动态图，觉得非常生动且有助于理解。而自己也有一段时间没接触过各种算法了，因此决定整理一下，将他们拾起来 📝
@@ -138,5 +138,38 @@ function shellSort(array) {
     gap = Math.floor(gap / 2);
   }
   return array;
+}
+```
+
+## 快速排序
+
+> 快速排序的基本思想：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+
+![快速排序](/images/algorithms/.gif)
+
+代码实现：
+
+简单版：
+
+```js
+function quickSort(arr = []) {
+  // 当数组长度小于等于1时，直接返回数组
+  if (arr.length <= 1) return arr;
+  const left = [];
+  const right = [];
+  const pivot = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    // 比指定值大的，推进右数组，否则推进左数组
+    arr[i] > pivot ? right.push(arr[i]) : left.push(arr[i]);
+  };
+  return [...quickSort(left), pivot, ...quickSort(right)];
+}
+```
+
+标准版：
+
+```js
+function quickSort(arr = []) {
+
 }
 ```
