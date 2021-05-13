@@ -311,10 +311,10 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "关于羊小羊", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    # - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
@@ -472,7 +472,7 @@ index:
   # Meta information of post
   post_meta:
     date: true
-    category: true
+    category: false
     tag: true
 
   # 文章通过 sticky 排序后，在首页文章标题前显示图标
@@ -524,10 +524,10 @@ post:
     # Estimate the time required to read the full text
     min2read:
       enable: true
-      format: "{} 分钟"
+      format: "预计阅读耗时 {} 分钟"
       # 每分钟阅读多少字，如果是技术文章，建议降低
       # Words read per minute
-      words: 60
+      words: 110
 
     # 浏览量计数
     # Number of visits
@@ -761,8 +761,8 @@ twikoo:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.png
-  banner_img_height: 60
+  banner_img: /images/HCY1.jpeg
+  banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
 
@@ -772,7 +772,7 @@ archive:
 # Category Page
 #---------------------------
 category:
-  enable: true
+  enable: false
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
@@ -803,8 +803,8 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.png
-  banner_img_height: 60
+  banner_img: /images/HCY2.jpeg
+  banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
   tagcloud:
