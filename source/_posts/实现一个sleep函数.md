@@ -22,6 +22,9 @@ const sleep = time => {
 sleep(1000).then(res => {
   console.log('Promise');
 })
+
+// 1秒后
+// Promise
 ```
 
 ### Async/Await
@@ -37,19 +40,26 @@ async function output() {
   console.log('Async/Await---End');
 }
 
-output();
+output(); 
+
+// Async/Await---Start
+// 1秒后
+// Async/Await---End
 ```
 
 ### Generator
 
 ```js
-function * sleepGenerator(time) {
+function* sleepGenerator(time) {
   yield new Promise(resolve => setTimeout(resolve, time))
 }
 
 sleepGenerator(1000).next().value.then(() => {
   console.log('Generator');
 })
+
+// 1秒后
+// Generator
 ```
 
 ## ES5
@@ -62,6 +72,8 @@ ES5主要通过setTimeout回调函数的方式实现。
 function sleep(callback, time) {
   if (typeof callback === 'function') {
     setTimeout(callback, time);
+  } else {
+    console.log('回调函数错误');
   }
 }
 
@@ -70,4 +82,7 @@ function output() {
 }
 
 sleep(output, 1000);
+
+// 1秒后
+// 回调
 ```
