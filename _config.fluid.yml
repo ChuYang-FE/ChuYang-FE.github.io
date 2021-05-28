@@ -415,7 +415,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/default.png
+  banner_img: /images/background-images/seagull.jpeg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -425,7 +425,7 @@ index:
   # 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
   # Available: 0 - 1.0
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0
 
   # 首页副标题的独立设置
   # Independent config of home page subtitle
@@ -761,9 +761,9 @@ twikoo:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /images/HCY1.jpeg
-  banner_img_height: 80
-  banner_mask_alpha: 0.3
+  banner_img: /images/background-images/flowers.jpeg
+  banner_img_height: 100
+  banner_mask_alpha: 0
   subtitle:
 
 
@@ -803,9 +803,9 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /images/HCY2.jpeg
-  banner_img_height: 80
-  banner_mask_alpha: 0.3
+  banner_img: /images/background-images/dragonfly.jpeg
+  banner_img_height: 100
+  banner_mask_alpha: 0.2
   subtitle:
   tagcloud:
     min_font: 15
@@ -821,12 +821,12 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /images/about/sky-airplane.jpg
+  banner_img: /images/background-images/orange.jpeg
   banner_img_height: 80
-  banner_mask_alpha: 0.2
-  subtitle: '关于羊小羊'
+  banner_mask_alpha: 0
+  subtitle: '关于羊小羊😎'
   avatar: /images/about/avatar.JPG
-  name: "羊小羊 (ChuYang)"
+  name: "羊小羊 (William)"
   intro: "Knowledge is weightless, a treasure you can always carry easily."
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
