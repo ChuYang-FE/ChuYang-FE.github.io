@@ -44,8 +44,8 @@ tags: [技术, 效率, Mac]
 
 配置主题的前提：
 
-   >1. 安装了zsh
-   >2. 安装了powerline字体
+   >1. 安装了 zsh
+   >2. 安装了 powerline 字体
    >3. 安装方法参考：https://github.com/powerline/fonts
 
 1. iTerm2
