@@ -15,24 +15,18 @@ tags: [技术, JavaScript]
 ### Promise
 
 ```js
-const sleep = time => {
-  return new Promise(resolve => setTimeout(resolve, time))
-}
+const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 
+// 1秒后，打印‘Promise’
 sleep(1000).then(res => {
   console.log('Promise');
 })
-
-// 1秒后
-// Promise
 ```
 
 ### Async/Await
 
 ```js
-const sleep = time => {
-  return new Promise(resolve => setTimeout(resolve, time))
-}
+const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 
 async function output() {
   console.log('Async/Await---Start');
@@ -40,11 +34,8 @@ async function output() {
   console.log('Async/Await---End');
 }
 
+// 先直接打印 Async/Await---Start，1秒后打印 Async/Await---End
 output(); 
-
-// Async/Await---Start
-// 1秒后
-// Async/Await---End
 ```
 
 ### Generator
@@ -58,8 +49,7 @@ sleepGenerator(1000).next().value.then(() => {
   console.log('Generator');
 })
 
-// 1秒后
-// Generator
+// 1秒后，打印‘Generator’
 ```
 
 ## ES5
@@ -81,8 +71,6 @@ function output() {
   console.log('回调');
 }
 
+// 1秒后，打印‘回调’
 sleep(output, 1000);
-
-// 1秒后
-// 回调
 ```
