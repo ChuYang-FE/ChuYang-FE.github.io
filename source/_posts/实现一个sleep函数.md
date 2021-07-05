@@ -45,11 +45,10 @@ function* sleepGenerator(time) {
   yield new Promise(resolve => setTimeout(resolve, time))
 }
 
+// 1秒后，打印‘Generator’
 sleepGenerator(1000).next().value.then(() => {
   console.log('Generator');
 })
-
-// 1秒后，打印‘Generator’
 ```
 
 ## ES5
