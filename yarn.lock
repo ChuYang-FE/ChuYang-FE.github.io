@@ -145,15 +145,6 @@
   optionalDependencies:
     "fsevents" "~2.3.1"
 
-"clipboard@^2.0.0":
-  "integrity" "sha1-/8bBA90pZ6gwBfP2GXaqRlWkzbo="
-  "resolved" "https://registry.npm.taobao.org/clipboard/download/clipboard-2.0.8.tgz"
-  "version" "2.0.8"
-  dependencies:
-    "good-listener" "^1.2.2"
-    "select" "^1.1.2"
-    "tiny-emitter" "^2.0.0"
-
 "color-convert@^2.0.1":
   "integrity" "sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM="
   "resolved" "https://registry.npm.taobao.org/color-convert/download/color-convert-2.0.1.tgz"
@@ -270,11 +261,6 @@
   "integrity" "sha1-RNLqNnm49NT/ujPwPYZfwee/SVU="
   "resolved" "https://registry.npm.taobao.org/deepmerge/download/deepmerge-4.2.2.tgz"
   "version" "4.2.2"
-
-"delegate@^3.1.2":
-  "integrity" "sha1-tmtxwxWFIuirV0T3INjKDCr1kWY="
-  "resolved" "https://registry.npm.taobao.org/delegate/download/delegate-3.2.0.tgz"
-  "version" "3.2.0"
 
 "depd@~1.1.2":
   "integrity" "sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak="
@@ -434,13 +420,6 @@
     "once" "^1.3.0"
     "path-is-absolute" "^1.0.0"
 
-"good-listener@^1.2.2":
-  "integrity" "sha1-1TswzfkxPf+33JoNR3CWqm0UXFA="
-  "resolved" "https://registry.npm.taobao.org/good-listener/download/good-listener-1.2.2.tgz"
-  "version" "1.2.2"
-  dependencies:
-    "delegate" "^3.1.2"
-
 "graceful-fs@^4.1.11", "graceful-fs@^4.1.3":
   "integrity" "sha1-/wQLKwhTsjw9MQJ1I3BvGIXXa+4="
   "resolved" "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.6.tgz?cache=0&sync_timestamp=1612894097557&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgraceful-fs%2Fdownload%2Fgraceful-fs-4.2.6.tgz"
@@ -458,10 +437,10 @@
   dependencies:
     "function-bind" "^1.1.1"
 
-"hexo-cli@^4.0.0":
-  "integrity" "sha1-dGR7xyqQuc6/BK9bxwg5qygaMF0="
-  "resolved" "https://registry.npm.taobao.org/hexo-cli/download/hexo-cli-4.2.0.tgz"
-  "version" "4.2.0"
+"hexo-cli@^4.0.0", "hexo-cli@^4.3.0":
+  "integrity" "sha512-lr46h1tK1RNQJAQZbzKYAWGsmqF5DLrW6xKEakqv/o9JqgdeempBjIm7HqjcZEUBpWij4EO65X6YJiDmT9LR7g=="
+  "resolved" "https://registry.npmjs.org/hexo-cli/-/hexo-cli-4.3.0.tgz"
+  "version" "4.3.0"
   dependencies:
     "abbrev" "^1.1.1"
     "bluebird" "^3.5.5"
@@ -613,9 +592,9 @@
     "strip-indent" "^3.0.0"
     "striptags" "^3.1.1"
 
-"hexo@^5.0.0":
-  "integrity" "sha1-d9V/ocKfOrBZZP5OvZxE4j31Gzc="
-  "resolved" "https://registry.npm.taobao.org/hexo/download/hexo-5.4.0.tgz"
+"hexo@^5.4.0":
+  "integrity" "sha512-4vMDle5GjpMeOVrx0NKoTZCqrmpJVg3wNiNNUVjcoFfcpYcMzQUCZHBtQqLl7BzjJ8x2gs002VQ5yv0ZKtj8Jg=="
+  "resolved" "https://registry.npmjs.org/hexo/-/hexo-5.4.0.tgz"
   "version" "5.4.0"
   dependencies:
     "abbrev" "^1.1.1"
@@ -965,11 +944,9 @@
   "version" "1.0.3"
 
 "prismjs@^1.17.1":
-  "integrity" "sha1-07OWf31yRAaQSXZSqdQP8EYGfzM="
-  "resolved" "https://registry.npm.taobao.org/prismjs/download/prismjs-1.23.0.tgz"
-  "version" "1.23.0"
-  optionalDependencies:
-    "clipboard" "^2.0.0"
+  "integrity" "sha512-SqV5GRsNqnzCL8k5dfAjCNhUrF3pR0A9lTDSCUZeh/LIshheXJEaP0hwLz2t4XHivd2J/v2HR+gRnigzeKe3cQ=="
+  "resolved" "https://registry.npmjs.org/prismjs/-/prismjs-1.24.0.tgz"
+  "version" "1.24.0"
 
 "range-parser@~1.2.1":
   "integrity" "sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE="
@@ -1020,11 +997,6 @@
   "integrity" "sha1-1HLbIo6zMcJQaw6MFVJK25OdEsE="
   "resolved" "https://registry.npm.taobao.org/sax/download/sax-0.5.8.tgz"
   "version" "0.5.8"
-
-"select@^1.1.2":
-  "integrity" "sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0="
-  "resolved" "https://registry.npm.taobao.org/select/download/select-1.1.2.tgz"
-  "version" "1.1.2"
 
 "semver@^6.3.0":
   "integrity" "sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0="
@@ -1140,9 +1112,9 @@
     "min-indent" "^1.0.0"
 
 "striptags@^3.1.1":
-  "integrity" "sha1-yMPn/db7S7OjKjt1LltePjgJPr0="
-  "resolved" "https://registry.npm.taobao.org/striptags/download/striptags-3.1.1.tgz"
-  "version" "3.1.1"
+  "integrity" "sha512-g45ZOGzHDMe2bdYMdIvdAfCQkCTDMGBazSw1ypMowwGIee7ZQ5dU0rBJ8Jqgl+jAKIv4dbeE1jscZq9wid1Tkw=="
+  "resolved" "https://registry.npmjs.org/striptags/-/striptags-3.2.0.tgz"
+  "version" "3.2.0"
 
 "stylus@^0.54.8":
   "integrity" "sha1-PaPmWWa8Vnp7BEv+DuzmU+CZ0Uc="
@@ -1196,11 +1168,6 @@
   "integrity" "sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q="
   "resolved" "https://registry.npm.taobao.org/timsort/download/timsort-0.3.0.tgz"
   "version" "0.3.0"
-
-"tiny-emitter@^2.0.0":
-  "integrity" "sha1-HRpW7fxRxD6GPLtTgqcjMONVVCM="
-  "resolved" "https://registry.npm.taobao.org/tiny-emitter/download/tiny-emitter-2.1.0.tgz"
-  "version" "2.1.0"
 
 "titlecase@^1.1.2":
   "integrity" "sha1-/G1l/1grBgJBB2jvGgm3BQYxPcM="
