@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/about/avatar-icon.jpeg">
+  <link rel="icon" href="/images/about/avatar-icon.jpeg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="如何搭建一个属于自己的在线博客呢？自动打包和部署如何实现？ 🤩🤩🤩">
+  <meta name="author" content="Tan ChuYang">
+  <meta name="keywords" content="">
+  
+  <title>个人博客搭建指南（Hexo） - 羊小羊的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>羊小羊的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于羊小羊
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="个人博客搭建指南（Hexo）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Tan ChuYang
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-28 22:39" pubdate>
+        2021年3月28日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      预计阅读耗时 
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">个人博客搭建指南（Hexo）</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年7月20日 中午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p><em><strong>如何搭建一个属于自己的在线博客呢？自动打包和部署如何实现？</strong></em> 🤩🤩🤩</p>
+<span id="more"></span>
+<h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>在大学某一天，无意间看到了别人的博客网站，这个网站记录了他的学习历程、技术分享文章及日常感想等。当时我觉得这也太酷了吧，于是就萌生了一个搭建个属于自己的博客的想法~</p>
+<p>想法虽然萌生了，但是我并没有立刻行动，一来是当时自己还是个学生，直接被服务器价格劝退了（当时也不知道 Github Pages 怎么用）；二是其实自己平常也有做笔记、做心得记录的习惯，只不过用的是云笔记，记录的知识点也比较任性杂乱（毕竟不用给他人阅读哈哈哈😂）。这样一来二去便作罢了。</p>
+<p><img src="/images/stickers/WTF.jpeg" srcset="/img/loading.gif" lazyload alt="当我看到服务器价格时"></p>
+<p>但今天，我突然回想起来自己曾经的想法，这想法直接把我从床上拎起来，仿佛在催促我：“赶紧去把这个想法圆了！”</p>
+<p>于是，我动手了。</p>
+<h2 id="实现指南"><a href="#实现指南" class="headerlink" title="实现指南"></a>实现指南</h2><h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>本次搭建博客对比了 Hexo、VuePress、Gatsby 3款框架，最终选择了Hexo，因为<strong>主题多</strong>！🤩</p>
+<p>首先确保电脑已经安装 node、npm、git，及已经注册了GitHub账号（需要用Github Pages），这里不赘述。</p>
+<h4 id="安装Hexo脚手架"><a href="#安装Hexo脚手架" class="headerlink" title="安装Hexo脚手架"></a>安装Hexo脚手架</h4><p><code>sudo npm install hexo-cli -g</code> (若是window系统，则不用加sudo命令)</p>
+<h4 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h4><p><code>hexo init blog</code></p>
+<h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><p><code>npm install</code></p>
+<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p><code>hexo server</code></p>
+<p>此时，项目已经能正常展示。</p>
+<h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><p>但是，默认主题并不好看，配一个符合自己审美的主题，例如我的是 <strong>Fluid</strong> (Hexo 5.0.0 版本以上，推荐通过 npm 直接安装，进入博客目录执行命令)</p>
+<p><code>npm install --save hexo-theme-fluid</code></p>
+<p>然后在博客目录下创建 <strong>_config.fluid.yml</strong> ，将主题的 <a target="_blank" rel="noopener" href="https://github.com/ChuYang-FE/ChuYang-FE.github.io/blob/my-blog/_config.fluid.yml">_config.yml</a> 内容复制过去。</p>
+<p>打开 <strong>_config.yml</strong> 文件，可根据安装的主题修改对应的主题名称（theme）、语言（language）。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span>  <span class="hljs-comment"># 指定主题</span><br><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></div></td></tr></table></figure>
+
+<h5 id="创建「关于页」"><a href="#创建「关于页」" class="headerlink" title="创建「关于页」"></a>创建「关于页」</h5><p>首次使用主题的「关于页」需要手动创建：</p>
+<p><code>hexo new page about</code></p>
+<p>创建成功后修改 /source/about/index.md，添加 layout 属性。</p>
+<p>修改后的文件示例如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">about</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2021-03-28 20:54:55</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-meta">---</span><br><br><span class="hljs-string">这里写关于页的正文，支持</span> <span class="hljs-string">Markdown,</span> <span class="hljs-string">HTML</span><br></code></pre></div></td></tr></table></figure>
+
+<h3 id="使用-GitHub-Pages-实现博客在线访问"><a href="#使用-GitHub-Pages-实现博客在线访问" class="headerlink" title="使用 GitHub Pages 实现博客在线访问"></a>使用 <strong>GitHub Pages</strong> 实现博客在线访问</h3><h4 id="用GitHub部署站点有2种方式"><a href="#用GitHub部署站点有2种方式" class="headerlink" title="用GitHub部署站点有2种方式"></a>用GitHub部署站点有2种方式</h4><ol>
+<li><p><code>https://[username].github.io</code> （适合博客😎）</p>
+<p>优点：路径足够短</p>
+<p>注意：仓库名必须为 <code>[username].github.io</code>；打包产物分支 <strong>master</strong></p>
+</li>
+<li><p><code>https://[username].github.io/[repo]</code> (适合作为开源项目或者Demo的展示页面)</p>
+<p>优点：可以自定义仓库名称repo</p>
+<p>注意：打包产物分支 <strong>gh-pages</strong></p>
+</li>
+</ol>
+<p>建好仓库以后，使用Git初始化本地项目，并推送到远程仓库。</p>
+<h4 id="部署过程"><a href="#部署过程" class="headerlink" title="部署过程"></a>部署过程</h4><ol>
+<li><p>首先，我们需要安装一个依赖：<code>hexo-deployer-git</code>，它能帮助我们将代码部署到一个具体的分支。</p>
+</li>
+<li><p>安装好后，打开 <strong>_config.yml</strong> 文件，拉到底部，修改deploy配置，如下图 <img src="/images/deploy-setting.png" srcset="/img/loading.gif" lazyload alt="deploy配置"></p>
+</li>
+<li><p>执行命令 <code>npm run deploy</code></p>
+</li>
+<li><p>打开GitHub，可以看到打包产物已经被提交到master分支上</p>
+</li>
+<li><p>打开仓库Setting，找到GitHub Pages，可以看到你部署的站点：<a target="_blank" rel="noopener" href="https://chuyang-fe.github.io/">https://chuyang-fe.github.io/</a></p>
+</li>
+<li><p>点击链接，发现博客可以在线访问了！🥳🥳🥳</p>
+</li>
+</ol>
+<h3 id="GitHub-Actions-自动化部署"><a href="#GitHub-Actions-自动化部署" class="headerlink" title="GitHub Actions 自动化部署"></a><strong>GitHub Actions</strong> 自动化部署</h3><p>好了，经过以上操作，我们已经拥有了一个属于自己的在线博客站点。</p>
+<p>但是！有一个问题：<strong>我不想每次写完博客都要自己手动打包部署怎么办</strong>🥺？</p>
+<p>正所谓，<del>懒是第一生产力（bushi）</del>，科技是第一生产力，GitHub Actions 帮助你。</p>
+<p>我们可以利用 GitHub Actions 的<strong>自动打包和代码部署</strong>功能。</p>
+<p>在此做自动化部署之前，由于master分支已经被占用，所以我们本地新建一个blog分支，提交代码并push到远程仓库。</p>
+<h4 id="实现自动化部署步骤"><a href="#实现自动化部署步骤" class="headerlink" title="实现自动化部署步骤"></a>实现自动化部署步骤</h4><ol>
+<li>根目录下创建 .github 文件夹，进入该文件夹并创建 workflows 文件夹</li>
+<li>在 workflows 文件夹里创建一个 deploy.yml 文件，内部具体配置代码可以看这里：<a href="../../.github/workflows/deploy.yml">deploy.yml</a></li>
+<li>提交代码，并push到远程仓库</li>
+</ol>
+<p>执行完Git push后，打开GitHub，可以看到blog分支右侧出现了一个小黄点，它代表 GitHub Actions 正在被触发，随后，博客被自动更新。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>好了！经过以上步骤，以后我们在blog分支上写完博客，本地无需执行打包和部署，只需提交代码，然后Git push即可，博客内容会被<strong>自动更新👏👏👏</strong></p>
+<p>本羊的第一篇博客完工！<strong>🤣🤣🤣</strong></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+                    
+                      <a class="hover-with-bg" href="/tags/GitHub/">GitHub</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/01/02_MacBook%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E6%B8%85%E5%8D%95/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MacBook前端开发必备清单</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "B8kWDiFEXDhqgdeaFDgF1J20-MdYXbMMI",
+          app_key: "hgpr0J2gtv8uaHbnszwKJ4g9",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "wavatar",
+          meta: ["nick"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: true,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

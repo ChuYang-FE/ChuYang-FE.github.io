@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/about/avatar-icon.jpeg">
+  <link rel="icon" href="/images/about/avatar-icon.jpeg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="早有耳闻Markdown，然而我一直没什么机会真正的接触它。但自开始写博博客以来，我便和它形影不离，才感叹：相见恨晚！🤩">
+  <meta name="author" content="Tan ChuYang">
+  <meta name="keywords" content="">
+  
+  <title>Markdown实用技巧 - 羊小羊的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>羊小羊的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于羊小羊
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Markdown实用技巧">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Tan ChuYang
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-24 23:39" pubdate>
+        2021年4月24日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      预计阅读耗时 
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Markdown实用技巧</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年7月20日 中午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>早有耳闻<strong>Markdown</strong>，然而我一直没什么机会真正的接触它。但自开始写博博客以来，我便和它形影不离，才感叹：相见恨晚！🤩</p>
+<span id="more"></span>
+
+<blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 HTML 文档。</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在没开始写博客之前，我更习惯在云笔记上写些想法、心得或随想。相较博客而言，在自己的笔记里可以放飞自我，不用在意格式，也不用在意排版，感觉只要只要记下了最核心的“内容”，便足矣。😂</p>
+<p>那既然要写博客，可不能写的这么放飞自我，否则读者的表情…👇</p>
+<p><img src="/images/stickers/WTF.jpeg" srcset="/img/loading.gif" lazyload alt="这写的是啥"></p>
+<p>于是，我“被迫”有了真正使用 Markdown 的机会。😎</p>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>下面简要介绍下基本语法~</p>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>一个#是一级标题，二个#是二级标题，以此类推。共支持六级标题。</p>
+<p>注：#后要跟个空格再写文字哦🥺</p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><h4 id="加粗（本羊用的最多🤩）"><a href="#加粗（本羊用的最多🤩）" class="headerlink" title="加粗（本羊用的最多🤩）"></a>加粗（本羊用的最多🤩）</h4><p>文字左右分别用两个*号包起来</p>
+<p>效果：<strong>我加粗了</strong></p>
+<h4 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h4><p>文字左右分别用一个*号包起来</p>
+<p>效果：<em>我歪了</em></p>
+<h4 id="斜体加粗"><a href="#斜体加粗" class="headerlink" title="斜体加粗"></a>斜体加粗</h4><p>文字左右分别用三个*号包起来</p>
+<p>效果：<em><strong>我又粗又斜</strong></em></p>
+<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><p>文字左右分别用两个~~号包起来</p>
+<p>效果：<del>懒惰（bushi）</del> 科技，是第一生产力！👏</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>例如本文开头关于 Markdown 的描述，就是用的引用（不知道为啥我觉得这个很酷😎）</p>
+<p>使用方法：<code>&gt;</code> 接引用。&gt;可以无限嵌套哦。效果如下：</p>
+<blockquote>
+<p>为何我的眼里常含泪水，因为我对前端爱得深沉。——羊本羊</p>
+</blockquote>
+<h3 id="本文-Markdown-展示"><a href="#本文-Markdown-展示" class="headerlink" title="本文 Markdown 展示"></a>本文 Markdown 展示</h3><h3 id="分隔线（还没用到过🥲）"><a href="#分隔线（还没用到过🥲）" class="headerlink" title="分隔线（还没用到过🥲）"></a>分隔线（还没用到过🥲）</h3><p>连续三个或以上的 - 或 *</p>
+<hr>
+<p>效果：👆</p>
+<h3 id="图片（我的最爱！😍）"><a href="#图片（我的最爱！😍）" class="headerlink" title="图片（我的最爱！😍）"></a>图片（我的最爱！😍）</h3><p>写博客当然得加上图片，理由如下：</p>
+<ol>
+<li>补充说明</li>
+<li>增加文章丰富性</li>
+<li>我想用表情包！🤩</li>
+</ol>
+<p><code>![alt属性文本](图片地址 &#39;可选标题&#39;)</code></p>
+<p>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。效果：</p>
+<p><img src="/images/stickers/what.png" srcset="/img/loading.gif" lazyload alt="啥？"></p>
+<h3 id="超链接（常用😘）"><a href="#超链接（常用😘）" class="headerlink" title="超链接（常用😘）"></a>超链接（常用😘）</h3><p><code>[超链接名](超链接地址 &quot;可选超链接title&quot;)</code></p>
+<blockquote>
+<p>tips: hexo中需变量：<code>&#123;% post_link 效率神器——Alfred %&#125;</code></p>
+</blockquote>
+<p>效果：</p>
+<a href="#">Post not found: 效率神器——Alfred</a>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p><code>- + *</code> 均可</p>
+<p>如</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 小明<br><span class="hljs-bullet">-</span> 小美<br><span class="hljs-bullet">-</span> 小羊<br></code></pre></div></td></tr></table></figure>
+
+<p>效果：</p>
+<ul>
+<li>小明</li>
+<li>小美</li>
+<li>小羊</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 小明<br><span class="hljs-bullet">2.</span> 小美<br><span class="hljs-bullet">3.</span> 小羊<br></code></pre></div></td></tr></table></figure>
+
+<p>效果：</p>
+<ol>
+<li>小明</li>
+<li>小美</li>
+<li>小羊</li>
+</ol>
+<h4 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h4><p>在上一级与下一级间以3个空格作为开头即可，效果：</p>
+<ol>
+<li>小明<ol>
+<li>明之子</li>
+<li>明之女</li>
+</ol>
+</li>
+<li>小美<ol>
+<li>美之子</li>
+<li>美之女</li>
+</ol>
+</li>
+<li>小羊<ol>
+<li>羊之子</li>
+<li>羊之女</li>
+</ol>
+</li>
+</ol>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p><code>使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行</code>，用法：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">|  表头   | 表头  |<br>|  ----  | ----  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |<br></code></pre></div></td></tr></table></figure>
+
+<p>设置表格的对齐方式：</p>
+<ol>
+<li>-: 设置内容和标题栏居右对齐。</li>
+<li>:- 设置内容和标题栏居左对齐。</li>
+<li>:-: 设置内容和标题栏居中对齐。</li>
+</ol>
+<p>以 <a href="#">Post not found: Oh-My-Zsh中Git的常用快捷键</a> 这篇文章用到的为例，如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">快捷键|完整写法<br>|:-|:-|<br>g|git<br>gaa|git add .<br>gcmsg|git commit -m<br>gcb|git checkout -b<br>gst|git status<br>gf|git fetch<br>gl|git pull<br>gup|git pull --rebase<br>grb|git rebase<br>gsta|git stash save<br>gstp|git stash pop<br>gcp|git cherry-pick<br>mg|git merge<br>gp|git push<br></code></pre></div></td></tr></table></figure>
+
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">完整写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">g</td>
+<td align="left">git</td>
+</tr>
+<tr>
+<td align="left">gaa</td>
+<td align="left">git add .</td>
+</tr>
+<tr>
+<td align="left">gcmsg</td>
+<td align="left">git commit -m</td>
+</tr>
+<tr>
+<td align="left">gcb</td>
+<td align="left">git checkout -b</td>
+</tr>
+<tr>
+<td align="left">gst</td>
+<td align="left">git status</td>
+</tr>
+<tr>
+<td align="left">gf</td>
+<td align="left">git fetch</td>
+</tr>
+<tr>
+<td align="left">gl</td>
+<td align="left">git pull</td>
+</tr>
+<tr>
+<td align="left">gup</td>
+<td align="left">git pull –rebase</td>
+</tr>
+<tr>
+<td align="left">grb</td>
+<td align="left">git rebase</td>
+</tr>
+<tr>
+<td align="left">gsta</td>
+<td align="left">git stash save</td>
+</tr>
+<tr>
+<td align="left">gstp</td>
+<td align="left">git stash pop</td>
+</tr>
+<tr>
+<td align="left">gcp</td>
+<td align="left">git cherry-pick</td>
+</tr>
+<tr>
+<td align="left">mg</td>
+<td align="left">git merge</td>
+</tr>
+<tr>
+<td align="left">gp</td>
+<td align="left">git push</td>
+</tr>
+</tbody></table>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h4><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-code">`单行代码`</span><br></code></pre></div></td></tr></table></figure>
+
+<h4 id="代码块（用的很多😘）"><a href="#代码块（用的很多😘）" class="headerlink" title="代码块（用的很多😘）"></a>代码块（用的很多😘）</h4><p>用法如图：</p>
+<p><img src="/images/markdown-block.png" srcset="/img/loading.gif" lazyload alt="代码块"></p>
+<blockquote>
+<p>tips: ```后跟js代表当前是JavaScript的代码块，方便高亮。</p>
+</blockquote>
+<p>效果：</p>
+<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showDemo</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Demo&#x27;</span>);<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说，平常用的 Markdown 语法主要是以上介绍的这些，已经足够应付日常的写作~</p>
+<p>如果以后有用到其他的语法，我会继续补充本文章滴~😎</p>
+<p>对了，补充一个 VS Code 插件 <code>Markdown All in One</code>， 可以实时预览~</p>
+<p><img src="/images/markdown-profile.png" srcset="/img/loading.gif" lazyload alt="Markdown All in One 插件实时预览"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/29/09_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">用栈实现队列</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/17/07_%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Alfred/">
+                        <span class="hidden-mobile">效率神器——Alfred</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "B8kWDiFEXDhqgdeaFDgF1J20-MdYXbMMI",
+          app_key: "hgpr0J2gtv8uaHbnszwKJ4g9",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "wavatar",
+          meta: ["nick"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: true,
+          recordIP: true,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
