@@ -87,16 +87,38 @@ function selectSort(array) {
 
 代码实现：
 
+方法1：
+
 ```js
-function insertSort(array) {
+function insertionSort1(array) {
   let temp;
   for (let i = 1; i < array.length; i++) {
     temp = array[i]; // 每轮取出当前值，避免被覆盖。
     let j = i - 1;
     while (j >= 0  && array[j] > temp) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = temp;
+  }
+  return array;
+}
+```
+
+方法2：
+
+```js
+function insertionSort2(array) {
+  let temp, i, j;
+  for (i = 1; i < array.length; i++) {
+    temp = array[i];
+    for (j = i - 1; j >= 0; j--) {
+      if (array[j] > temp) {
         array[j + 1] = array[j];
-        j--;
+      } else {
+        break; // 务必跳出该轮循环，避免往下执行
       }
+    }
     array[j + 1] = temp;
   }
   return array;
@@ -145,7 +167,7 @@ function shellSort(array) {
 
 > 快速排序的基本思想：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
 
-![快速排序](/images/algorithms/.gif)
+![快速排序](/images/algorithms/quick.gif)
 
 代码实现：
 
