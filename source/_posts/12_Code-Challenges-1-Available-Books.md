@@ -4,7 +4,7 @@ date: 2021-07-15 17:14:43
 tags: [技术, JavaScript, 算法, JS Code Challenges]
 ---
 
-领英课程： `JavaScript Code Challenges` 系列：EP1- [Available Books](https://www.linkedin.com/learning/javascript-code-challenges/available-books?u=2113185)
+领英课程： `JavaScript Code Challenges` 系列：EP1- [Available Books](https://www.linkedin.com/learning/javascript-code-challenges/available-books)
 
 <!-- more -->
 
