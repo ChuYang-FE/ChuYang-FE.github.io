@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="领英课程： JavaScript Code Challenges 系列：EP4- Technical Books">
+  <meta name="description" content="Vite + React 18 + TS，集成 ESLint 和 Prettier ，开箱即用，无需再从零开始配置。便于统一团队代码风格及规范。">
   <meta name="author" content="Tan ChuYang">
   <meta name="keywords" content="">
   
-  <title>Code-Challenges: 4-Technical-Books - 羊小羊的博客</title>
+  <title>基于 Vite 搭建 React18 + TS 的开发模板 - 羊小羊的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -151,7 +151,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Code-Challenges: 4-Technical-Books">
+            <span class="h2" id="subtitle" title="基于 Vite 搭建 React18 + TS 的开发模板">
               
             </span>
 
@@ -166,8 +166,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-05 22:21" pubdate>
-        2021年8月5日 晚上
+      <time datetime="2022-05-25 10:18" pubdate>
+        2022年5月25日 上午
       </time>
     </span>
   
@@ -178,7 +178,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      231 字
+      155 字
     </span>
   
 
@@ -188,7 +188,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       预计阅读耗时 
-      3
+      1
        分钟
     </span>
   
@@ -218,7 +218,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Code-Challenges: 4-Technical-Books</h1>
+            <h1 style="display: none">基于 Vite 搭建 React18 + TS 的开发模板</h1>
             
               <p class="note note-info">
                 
@@ -227,17 +227,15 @@
               </p>
             
             <div class="markdown-body">
-              <p>领英课程： <code>JavaScript Code Challenges</code> 系列：EP4- <a target="_blank" rel="noopener" href="https://www.linkedin.com/learning/javascript-code-challenges/technical-books">Technical Books</a></p>
+              <p>Vite + React 18 + TS，集成 ESLint 和 Prettier ，开箱即用，无需再从零开始配置。便于统一团队代码风格及规范。</p>
 <span id="more"></span>
 
 <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><blockquote>
-<p>题目只作简要描述，具体题目请点击上方👆🏻标题跳转。</p>
+<p>为了尽量减少手动配置，本项目的搭建将尽可能使用已有工具。</p>
 </blockquote>
-<p>继承 挑战1（<a href="/2021/07/15/12_Code-Challenges-1-Available-Books/" title="Code Challenges: 1-Available Books">Code Challenges: 1-Available Books</a>）中的 <code>Book</code> 类，并新增一个 <code>edition</code> 属性，使用 <code>getEdition()</code> 方法获取当前版本。</p>
-<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-comment">// 挑战1中的 Book 类</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Book</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">title, author, ISBN, numCopies</span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.title = title;<br>    <span class="hljs-built_in">this</span>.author = author;<br>    <span class="hljs-built_in">this</span>.ISBN = ISBN;<br>    <span class="hljs-built_in">this</span>.numCopies = numCopies;<br>  &#125;<br><br>  <span class="hljs-keyword">get</span> <span class="hljs-title">availability</span>() &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.getAvailability();<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-title">getAvailability</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.numCopies &lt;= <span class="hljs-number">0</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Out of stock&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.numCopies &lt; <span class="hljs-number">10</span>) &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-string">`Low stock: <span class="hljs-subst">$&#123;<span class="hljs-built_in">this</span>.numCopies&#125;</span>`</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">`In stock: <span class="hljs-subst">$&#123;<span class="hljs-built_in">this</span>.numCopies&#125;</span>`</span>;<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-title">sell</span>(<span class="hljs-params">numSold = <span class="hljs-number">1</span></span>)</span> &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.numCopies &lt;= <span class="hljs-number">0</span>) &#123;<br>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;No stock&#x27;</span>);<br>      <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-built_in">this</span>.numCopies -= numSold;<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-title">restock</span>(<span class="hljs-params">numCopiesStocked = <span class="hljs-number">5</span></span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.numCopies += numCopiesStocked;<br>  &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
-
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TechnicalBook</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Book</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">title, author, ISBN, numCopies, edition</span>)</span> &#123;<br>    <span class="hljs-built_in">super</span>(title, author, ISBN, numCopies);<br>    <span class="hljs-built_in">this</span>.edition = edition;<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-title">getEdition</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">`The current version of this book is <span class="hljs-subst">$&#123;<span class="hljs-built_in">this</span>.edition&#125;</span>.`</span>;<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">const</span> myTechnicalBook = <span class="hljs-keyword">new</span> TechnicalBook(<br>  <span class="hljs-string">&#x27;......&#x27;</span>, <span class="hljs-comment">// 继承原属性</span><br>  <span class="hljs-string">&#x27;2.0&#x27;</span>, <span class="hljs-comment">// edition</span><br>);<br><br>myTechnicalBook.getEdition();<br></code></pre></div></td></tr></table></figure>
-
+<p>每次想建一个项目，都需要从零开始配置？<code>ESLint</code> 和 <code>Prettie</code> 的冲突让人难受？</p>
+<p>使用 <code>Create-React-App</code> 确实能节省一部分配置时间，但是为了有更好的开发体验，感受更快的热更新及打包速度，本次选用了 <a target="_blank" rel="noopener" href="https://cn.vitejs.dev/">Vite</a>。</p>
+<h2 id="搭建基础模板"><a href="#搭建基础模板" class="headerlink" title="搭建基础模板"></a>搭建基础模板</h2><h2 id="集成-ESLint-和-Prettier"><a href="#集成-ESLint-和-Prettier" class="headerlink" title="集成 ESLint 和 Prettier"></a>集成 ESLint 和 Prettier</h2><h3 id="各个包的作用"><a href="#各个包的作用" class="headerlink" title="各个包的作用"></a>各个包的作用</h3>
             </div>
             <hr>
             <div>
@@ -249,11 +247,9 @@
                     
                       <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%88%E7%8E%87/">效率</a>
                     
-                      <a class="hover-with-bg" href="/tags/JavaScript/">JavaScript</a>
-                    
-                      <a class="hover-with-bg" href="/tags/JS-Code-Challenges/">JS Code Challenges</a>
+                      <a class="hover-with-bg" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
                     
                   </div>
                 
@@ -270,18 +266,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">基于 Vite 搭建 React18 + TS 的开发模板</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/15/12_Code-Challenges-1-Available-Books/">
-                        <span class="hidden-mobile">Code Challenges: 1-Available Books</span>
+                      <a href="/2021/08/05/13-Code-Challenges-4-Technical-Books/">
+                        <span class="hidden-mobile">Code-Challenges: 4-Technical-Books</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

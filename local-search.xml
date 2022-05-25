@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>基于 Vite 搭建 React18 + TS 的开发模板</title>
+    <link href="/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/"/>
+    <url>/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/</url>
+    
+    <content type="html"><![CDATA[<p>Vite + React 18 + TS，集成 ESLint 和 Prettier ，开箱即用，无需再从零开始配置。便于统一团队代码风格及规范。</p><span id="more"></span><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><blockquote><p>为了尽量减少手动配置，本项目的搭建将尽可能使用已有工具。</p></blockquote><p>每次想建一个项目，都需要从零开始配置？<code>ESLint</code> 和 <code>Prettie</code> 的冲突让人难受？</p><p>使用 <code>Create-React-App</code> 确实能节省一部分配置时间，但是为了有更好的开发体验，感受更快的热更新及打包速度，本次选用了 <a href="https://cn.vitejs.dev/">Vite</a>。</p><h2 id="搭建基础模板"><a href="#搭建基础模板" class="headerlink" title="搭建基础模板"></a>搭建基础模板</h2><h2 id="集成-ESLint-和-Prettier"><a href="#集成-ESLint-和-Prettier" class="headerlink" title="集成 ESLint 和 Prettier"></a>集成 ESLint 和 Prettier</h2><h3 id="各个包的作用"><a href="#各个包的作用" class="headerlink" title="各个包的作用"></a>各个包的作用</h3>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
+      
+      <tag>效率</tag>
+      
+      <tag>工具</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Code-Challenges: 4-Technical-Books</title>
     <link href="/2021/08/05/13-Code-Challenges-4-Technical-Books/"/>
     <url>/2021/08/05/13-Code-Challenges-4-Technical-Books/</url>
