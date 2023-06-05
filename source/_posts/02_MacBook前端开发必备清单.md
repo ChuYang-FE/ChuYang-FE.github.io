@@ -60,7 +60,7 @@ tags: [技术, Mac, 记录, 前端, 效率]
 
    此神仙组合能让你的终端好用一万倍🤩🤩🤩，详细配置文章看这里：
 
-   {% post_link 终端体验提升计划-iTerm2-Oh-My-Zsh %}
+   {% post_link 03_终端体验提升计划-iTerm2-Oh-My-Zsh %}
 
 2. [Homebrew](https://brew.sh/index_zh-cn)
 
@@ -94,7 +94,7 @@ tags: [技术, Mac, 记录, 前端, 效率]
 
    Homebrew的具体说明请看这里：
 
-   {% post_link Mac必备神器——Homebrew %}
+   {% post_link 05_Mac必备神器——Homebrew %}
 
 3. Alfred
 
@@ -102,7 +102,7 @@ tags: [技术, Mac, 记录, 前端, 效率]
 
    Alfred 提供的功能虽然很多，但目的只有一个 —— 减少我们工作中的一些重复动作，提升我们的工作效率。
 
-   具体安装及使用请看这里：{% post_link 效率神器——Alfred %}
+   具体安装及使用请看这里：{% post_link 07_效率神器——Alfred %}
 
 ## 总结
 

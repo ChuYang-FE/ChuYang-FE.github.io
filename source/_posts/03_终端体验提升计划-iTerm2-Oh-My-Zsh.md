@@ -12,7 +12,7 @@ tags: [技术, 效率, Mac]
 
 ## 概述
 
-在 {% post_link MacBook前端开发必备清单 %} 中展示了MacBook前端开发的必备清单，本文将介绍其一： **iTerm2 + Oh-My-Zsh**
+在 {% post_link 02_MacBook前端开发必备清单 %} 中展示了MacBook前端开发的必备清单，本文将介绍其一： **iTerm2 + Oh-My-Zsh**
 
 ## 介绍
 
@@ -46,7 +46,7 @@ tags: [技术, 效率, Mac]
 
    >1. 安装了 zsh
    >2. 安装了 powerline 字体
-   >3. 安装方法参考：https://github.com/powerline/fonts
+   >3. 安装方法参考：<https://github.com/powerline/fonts>
 
 1. iTerm2
 
@@ -72,7 +72,7 @@ tags: [技术, 效率, Mac]
 
 `gaa` 就是 `git add --all`
 
-更多常用git快捷键可以看 {% post_link Oh-My-Zsh中Git的常用快捷键 %}
+更多常用git快捷键可以看 {% post_link 04_Oh-My-Zsh中Git的常用快捷键 %}
 
 此外，还强烈建议装上以下的插件：
 
@@ -98,7 +98,7 @@ tags: [技术, 效率, Mac]
 
    由于 `z` 是 zsh 内置的，所以只需在 plugins中加入 z 即可
 
-输入 `vim ~/zshrc` 进入 .zshrc ，按 `i` 进入编辑状态，找到plugins，输入以下内容
+输入 `vim ~/.zshrc` 进入 .zshrc ，按 `i` 进入编辑状态，找到plugins，输入以下内容
 
 ``` zsh
 plugins=(
@@ -113,7 +113,7 @@ plugins=(
 
 `source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
 
-最后输入`:wq` 保存并退出，最后执行命令 `source ~/.zshrc` 使刚才的修改生效。
+输入完成后，点击键盘`esc`键退出编辑模式，然后输入`:wq` 保存并退出，最后执行命令 `source ~/.zshrc` 使刚才的修改生效。
 
 ## 总结
 

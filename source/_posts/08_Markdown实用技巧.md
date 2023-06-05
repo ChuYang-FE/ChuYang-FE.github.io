@@ -98,7 +98,7 @@ tags: [技术, 记录, 博客]
 
 效果：
 
-{% post_link 效率神器——Alfred %}
+{% post_link 07_效率神器——Alfred %}
 
 ### 列表
 

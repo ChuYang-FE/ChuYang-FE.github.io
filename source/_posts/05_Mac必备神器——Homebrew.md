@@ -12,7 +12,7 @@ tags: [技术, Mac, 效率]
 
 ## 背景
 
-在 {% post_link MacBook前端开发必备清单 %} 中，本羊简要介绍了下 HomeBrew ，如果你没看过那篇文章，这里本羊再当一遍复读机：
+在 {% post_link 02_MacBook前端开发必备清单 %} 中，本羊简要介绍了下 HomeBrew ，如果你没看过那篇文章，这里本羊再当一遍复读机：
 
 > [Homebrew](https://brew.sh/index_zh-cn) 是一款用于 macOS 的开源的软件包管理器，能够帮助你快速下载软件。
 
