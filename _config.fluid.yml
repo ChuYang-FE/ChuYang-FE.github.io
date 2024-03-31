@@ -1,3 +1,4 @@
+---
 #---------------------------
 # Hexo Theme Fluid
 # Author: Fluid-dev
@@ -9,7 +10,6 @@
 # Guide: https://hexo.fluid-dev.com/docs/en/guide/
 # You can get more detailed help from the guide
 #---------------------------
-
 
 #---------------------------
 # 全局
@@ -200,15 +200,15 @@ custom_css:
 
 # 自定义 <head> 节点中的 HTML 内容
 # Customize <head> HTML content
-custom_head: ''
+custom_head: ""
 
 # 自定义底部 HTML 内容（位于 footer 上方），注意不要和 `post: custom` 配置冲突
 # Customize the HTML content at the bottom (located above the footer), be careful not to conflict with `post: custom`
-custom_html: ''
+custom_html: ""
 
 # 网页访问统计
 # Analysis of website visitors
-web_analytics:  # 网页访问统计
+web_analytics: # 网页访问统计
   enable: false
 
   # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
@@ -236,7 +236,7 @@ web_analytics:  # 网页访问统计
   # 51.la 站点统计 ID
   # 51.la analytics
   # See: https://www.51.la/user/site/index
-  woyaola:  # 51.la 站点统计 ID，参见
+  woyaola: # 51.la 站点统计 ID，参见
 
   # 友盟/cnzz 站点统计 web_id
   # cnzz analytics
@@ -279,7 +279,6 @@ version:
   # 每次生成页面后，检测主题是否为最新版本
   # If true, check whether Fluid is the latest version after hexo generate
   check: false
-
 
 #---------------------------
 # 页头
@@ -369,7 +368,6 @@ scroll_down_arrow:
 scroll_top_arrow:
   enable: true
 
-
 #---------------------------
 # 页脚
 # Footer
@@ -377,7 +375,7 @@ scroll_top_arrow:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
-  content: ''
+  content: ""
 
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
@@ -406,7 +404,6 @@ footer:
     police_code: 12345678
     # 公安备案的图片. 为空时不显示备案图片
     police_icon: /img/police_beian.png
-
 
 #---------------------------
 # 首页
@@ -480,7 +477,6 @@ index:
   post_sticky:
     enable: true
     icon: "iconfont icon-top"
-
 
 #---------------------------
 # 文章页
@@ -591,7 +587,7 @@ post:
     enable: true
     # 脚注的节标题，也可以在 front-matter 中通过 `footnote: <h2>Reference</h2>` 这种形式修改单独页面的 header
     # The section title of the footnote, you can also modify the header of a single page in the form of `footnote: <h2>Reference</h2>` in front-matter
-    header: ''
+    header: ""
 
   # 数学公式，开启之前需要更换 Markdown 渲染器，否则复杂公式会有兼容问题，具体请见：https://hexo.fluid-dev.com/docs/guide/##latex-数学公式
   # Mathematical formula. If enable, you need to change the Markdown renderer, see: https://hexo.fluid-dev.com/docs/en/guide/#math
@@ -619,7 +615,7 @@ post:
     specific: false
 
     # See: http://mermaid-js.github.io/mermaid/
-    options: { theme: 'default' }
+    options: { theme: "default" }
 
   # 评论插件
   # Comment plugin
@@ -629,7 +625,6 @@ post:
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo
     type: valine
-
 
 #---------------------------
 # 评论插件
@@ -672,9 +667,9 @@ gitalk:
   clientSecret:
   repo:
   owner:
-  admin: ['name']
+  admin: ["name"]
   language: zh-CN
-  labels: ['Gitalk']
+  labels: ["Gitalk"]
   perPage: 10
   pagerDirection: last
   distractionFreeMode: false
@@ -695,7 +690,7 @@ valine:
   placeholder: 说点什么
   path: window.location.pathname
   avatar: wavatar
-  meta: ['nick']
+  meta: ["nick"]
   pageSize: 10
   lang: zh-CN
   highlight: true
@@ -707,18 +702,18 @@ valine:
 # A comment plugin with backend derived from Valine
 # See: https://waline.js.org/
 waline:
-  serverURL: ''
+  serverURL: ""
   placeholder: 说点什么
   path: window.location.pathname
   avatar: retro
-  meta: ['nick', 'mail', 'link']
+  meta: ["nick", "mail", "link"]
   pageSize: 10
   lang: zh-CN
   highlight: true
   avatarCDN:
   avatarForce: false
   requiredFields: []
-  emojiCDN: ''
+  emojiCDN: ""
   emojiMaps: {}
   anonymous:
 
@@ -727,15 +722,15 @@ waline:
 # Based on third-party service, insufficient support for regions outside China
 # http://changyan.kuaizhan.com
 changyan:
-  appid: ''
-  appkey: ''
+  appid: ""
+  appkey: ""
 
 # 来必力 Livere
 # 基于第三方的服务
 # Based on third-party service
 # See: https://www.livere.com
 livere:
-  uid: ''
+  uid: ""
 
 # Remark42
 # 需要自己运行后端服务
@@ -766,7 +761,6 @@ archive:
   banner_mask_alpha: 0
   subtitle:
 
-
 #---------------------------
 # 分类页
 # Category Page
@@ -796,7 +790,6 @@ category:
   # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
   post_limit: 10
 
-
 #---------------------------
 # 标签页
 # Tag Page
@@ -814,17 +807,16 @@ tag:
     start_color: "#BBBBEE"
     end_color: "#337ab7"
 
-
 #---------------------------
 # 关于页
 # About Page
 #---------------------------
 about:
   enable: true
-  banner_img: /images/background-images/orange.jpeg
+  banner_img: /images/background-images/marsConcert.jpeg
   banner_img_height: 80
   banner_mask_alpha: 0
-  subtitle: '关于羊小羊😎'
+  subtitle: "关于羊小羊😎"
   avatar: /images/about/avatar.JPG
   name: "羊小羊 (William)"
   intro: "Knowledge is weightless, a treasure you can always carry easily."
@@ -832,9 +824,12 @@ about:
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
     - { class: "iconfont icon-wechat-fill", qrcode: "/images/about/wechat.jpg" }
-    - { class: "iconfont icon-github-fill", link: "https://github.com/ChuYang-FE", tip: "羊小羊的GitHub" }
+    - {
+        class: "iconfont icon-github-fill",
+        link: "https://github.com/ChuYang-FE",
+        tip: "羊小羊的GitHub",
+      }
     # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-
 
 #---------------------------
 # 自定义页
@@ -848,7 +843,6 @@ page:
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
-
 #---------------------------
 # 404页
 # 404 Page
@@ -859,7 +853,6 @@ page404:
   banner_img_height: 85
   banner_mask_alpha: 0.3
   subtitle: "Page not found"
-
 
 #---------------------------
 # 友链页
@@ -875,23 +868,23 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
-    }
+        title: "Fluid Blog",
+        intro: "主题博客",
+        link: "https://hexo.fluid-dev.com/",
+        avatar: "/img/favicon.png",
+      }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
-    }
+        title: "Fluid Docs",
+        intro: "主题使用指南",
+        link: "https://hexo.fluid-dev.com/docs/",
+        avatar: "/img/favicon.png",
+      }
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
-    }
+        title: "Fluid Repo",
+        intro: "主题 GitHub 仓库",
+        link: "https://github.com/fluid-dev/hexo-theme-fluid",
+        avatar: "/img/favicon.png",
+      }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
@@ -901,7 +894,7 @@ links:
   # Custom content at the bottom of the links
   custom:
     enable: false
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
+    content: "<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>"
 
   # 评论插件
   # Comment plugin
@@ -911,7 +904,6 @@ links:
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo
     type: disqus
-
 
 #---------------------------
 # 以下是配置 JS CSS 等静态资源的 URL 前缀，可以自定义成 CDN 地址，
