@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,22 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/images/about/avatar-icon.jpeg">
   <link rel="icon" href="/images/about/avatar-icon.jpeg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Tan ChuYang">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="羊小羊的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="羊小羊的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Tan ChuYang">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
   
   <title>羊小羊的博客</title>
 
@@ -24,9 +32,12 @@
 
 
 
-<!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
@@ -35,24 +46,46 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.4.0"></head>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
 
 
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>羊小羊的博客</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>羊小羊的博客</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -69,9 +102,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -81,9 +114,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于羊小羊
+                <span>关于羊小羊</span>
               </a>
             </li>
           
@@ -93,9 +126,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -105,23 +138,26 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -129,34 +165,40 @@
   </div>
 </nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/images/background-images/seagull.jpeg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="We Are Bound To Be Free">
-              
-            </span>
+  
 
-            
-          </div>
-
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/background-images/seagull.jpeg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
+            <span id="subtitle" data-typed-text="We Are Bound To Be Free"></span>
           
         </div>
+
+        
       </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
+  </div>
+</div>
+
+</div>
+
   </header>
 
   <main>
     
       <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
+        <div id="board"
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
@@ -168,20 +210,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/">基于 Vite 搭建 React18 + TS 的开发模板</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/">
-          
-          
-            
-          
-          Vite + React 18 + TS，集成 ESLint 和 Prettier ，开箱即用，无需再从零开始配置。便于统一团队代码风格及规范。
+        <a href="/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/" target="_self">
+          基于 Vite 搭建 React18 + TS 的开发模板
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/05/25/14_%E6%90%AD%E5%BB%BA%20Vite%20+%20React%2018%20+%20TS%20%E5%BC%80%E5%8F%91%E6%A8%A1%E6%9D%BF/" target="_self">
+        <div>
+          Vite + React 18 + TS，集成 ESLint 和 Prettier ，开箱即用，无需再从零开始配置。便于统一团队代码风格及规范。
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -197,11 +238,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E6%95%88%E7%8E%87/">效率</a>
+              <a href="/tags/%E6%95%88%E7%8E%87/">#效率</a>
             
-              <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
             
           </div>
         
@@ -213,20 +254,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/08/05/13-Code-Challenges-4-Technical-Books/">Code-Challenges: 4-Technical-Books</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/08/05/13-Code-Challenges-4-Technical-Books/">
-          
-          
-            
-          
-          领英课程： JavaScript Code Challenges 系列：EP4- Technical Books
+        <a href="/2021/08/05/13-Code-Challenges-4-Technical-Books/" target="_self">
+          Code-Challenges: 4-Technical-Books
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/08/05/13-Code-Challenges-4-Technical-Books/" target="_self">
+        <div>
+          领英课程： JavaScript Code Challenges 系列：EP4- Technical Books
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -242,13 +282,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/JavaScript/">#JavaScript</a>
             
-              <a href="/tags/JS-Code-Challenges/">JS Code Challenges</a>
+              <a href="/tags/JS-Code-Challenges/">#JS Code Challenges</a>
             
           </div>
         
@@ -260,20 +300,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/07/15/12_Code-Challenges-1-Available-Books/">Code Challenges: 1-Available Books</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/15/12_Code-Challenges-1-Available-Books/">
-          
-          
-            
-          
-          领英课程： JavaScript Code Challenges 系列：EP1- Available Books
+        <a href="/2021/07/15/12_Code-Challenges-1-Available-Books/" target="_self">
+          Code Challenges: 1-Available Books
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/15/12_Code-Challenges-1-Available-Books/" target="_self">
+        <div>
+          领英课程： JavaScript Code Challenges 系列：EP1- Available Books
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -289,13 +328,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/JavaScript/">#JavaScript</a>
             
-              <a href="/tags/JS-Code-Challenges/">JS Code Challenges</a>
+              <a href="/tags/JS-Code-Challenges/">#JS Code Challenges</a>
             
           </div>
         
@@ -307,20 +346,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/05/25/11_%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAsleep%E5%87%BD%E6%95%B0/">实现一个sleep函数</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/05/25/11_%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAsleep%E5%87%BD%E6%95%B0/">
-          
-          
-            
-          
-          从ES5、ES6+的角度实现一个sleep函数。
+        <a href="/2021/05/25/11_%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAsleep%E5%87%BD%E6%95%B0/" target="_self">
+          实现一个sleep函数
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/05/25/11_%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAsleep%E5%87%BD%E6%95%B0/" target="_self">
+        <div>
+          从ES5、ES6+的角度实现一个sleep函数。
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -336,9 +374,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/JavaScript/">#JavaScript</a>
             
           </div>
         
@@ -350,20 +388,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/05/13/10_%E8%BF%91%E6%9C%9F%E8%B7%B3%E6%A7%BD%E9%9D%A2%E8%AF%95%E6%9C%89%E6%84%9F/">近期跳槽面试记录</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/05/13/10_%E8%BF%91%E6%9C%9F%E8%B7%B3%E6%A7%BD%E9%9D%A2%E8%AF%95%E6%9C%89%E6%84%9F/">
-          
-          
-            
-          
-          最近一两周在投简历面试，面了3家不同风格的公司：腾讯、外企、创业公司。简单谈下整体感受，做个记录📝
+        <a href="/2021/05/13/10_%E8%BF%91%E6%9C%9F%E8%B7%B3%E6%A7%BD%E9%9D%A2%E8%AF%95%E6%9C%89%E6%84%9F/" target="_self">
+          近期跳槽面试记录
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/05/13/10_%E8%BF%91%E6%9C%9F%E8%B7%B3%E6%A7%BD%E9%9D%A2%E8%AF%95%E6%9C%89%E6%84%9F/" target="_self">
+        <div>
+          最近一两周在投简历面试，面了3家不同风格的公司：腾讯、外企、创业公司。简单谈下整体感受，做个记录📝
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -379,11 +416,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+              <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>
             
-              <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a>
+              <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">#碎碎念</a>
             
           </div>
         
@@ -395,20 +432,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/04/29/09_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">用栈实现队列</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/29/09_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
-          
-          
-            
-          
-          LeetCode 232 用栈实现队列 (JavaScript版😎)
+        <a href="/2021/04/29/09_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" target="_self">
+          用栈实现队列
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/04/29/09_%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" target="_self">
+        <div>
+          LeetCode 232 用栈实现队列 (JavaScript版😎)
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -424,11 +460,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/JavaScript/">#JavaScript</a>
             
           </div>
         
@@ -440,20 +476,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/04/24/08_Markdown%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">Markdown实用技巧</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/24/08_Markdown%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">
-          
-          
-            
-          
-          早有耳闻Markdown，然而我一直没什么机会真正的接触它。但自开始写博博客以来，我便和它形影不离，才感叹：相见恨晚！🤩
+        <a href="/2021/04/24/08_Markdown%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/" target="_self">
+          Markdown实用技巧
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/04/24/08_Markdown%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/" target="_self">
+        <div>
+          早有耳闻Markdown，然而我一直没什么机会真正的接触它。但自开始写博博客以来，我便和它形影不离，才感叹：相见恨晚！🤩
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -469,11 +504,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+              <a href="/tags/%E8%AE%B0%E5%BD%95/">#记录</a>
             
-              <a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/">#博客</a>
             
           </div>
         
@@ -485,22 +520,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/04/17/07_%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Alfred/">效率神器——Alfred</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/17/07_%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Alfred/">
-          
-          
-            
-          
-          
-如Alfred官方所述：Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网页的内容，并通过自定义操作来控制Mac来提高生产力。😍
-
+        <a href="/2021/04/17/07_%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Alfred/" target="_self">
+          效率神器——Alfred
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/04/17/07_%E6%95%88%E7%8E%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Alfred/" target="_self">
+        <div>
+          如Alfred官方所述：Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网页的内容，并通过自定义操作来控制Mac来提高生产力。😍
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -516,11 +548,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E6%95%88%E7%8E%87/">效率</a>
+              <a href="/tags/%E6%95%88%E7%8E%87/">#效率</a>
             
-              <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
             
           </div>
         
@@ -532,20 +564,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/04/10/06_%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-JavaScript%E5%AE%9E%E7%8E%B0/">常见排序算法-JavaScript实现</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/10/06_%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-JavaScript%E5%AE%9E%E7%8E%B0/">
-          
-          
-            
-          
-          前几天偶尔看到了一些排序算法的动态图，觉得非常生动且有助于理解。而自己也有一段时间没接触过各种算法了，因此决定整理一下，将他们拾起来 📝
+        <a href="/2021/04/10/06_%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-JavaScript%E5%AE%9E%E7%8E%B0/" target="_self">
+          常见排序算法-JavaScript实现
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/04/10/06_%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95-JavaScript%E5%AE%9E%E7%8E%B0/" target="_self">
+        <div>
+          前几天偶尔看到了一些排序算法的动态图，觉得非常生动且有助于理解。而自己也有一段时间没接触过各种算法了，因此决定整理一下，将他们拾起来 📝
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -561,11 +592,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
             
-              <a href="/tags/JavaScript/">JavaScript</a>
+              <a href="/tags/JavaScript/">#JavaScript</a>
             
           </div>
         
@@ -577,20 +608,19 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
-        <a href="/2021/04/06/05_Mac%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Homebrew/">Mac必备神器——Homebrew</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/06/05_Mac%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Homebrew/">
-          
-          
-            
-          
-          你是否曾经：想安装某个软件，却发现 App Store 没有上架该软件（例如VS Code）🤬，然后需要进行：打开搜索引擎搜索进入官网、下载、安装、删除安装包……一系列烦人操作？如果是，看万这篇文章，相信你会直呼“相见恨晚🥺”
+        <a href="/2021/04/06/05_Mac%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Homebrew/" target="_self">
+          Mac必备神器——Homebrew
         </a>
-      </p>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/04/06/05_Mac%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%E2%80%94%E2%80%94Homebrew/" target="_self">
+        <div>
+          你是否曾经：想安装某个软件，却发现 App Store 没有上架该软件（例如VS Code）🤬，然后需要进行：打开搜索引擎搜索进入官网、下载、安装、删除安装包……一系列烦人操作？如果是，看万这篇文章，相信你会直呼“相见恨晚🥺”
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -606,11 +636,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
             
-              <a href="/tags/Mac/">Mac</a>
+              <a href="/tags/Mac/">#Mac</a>
             
-              <a href="/tags/%E6%95%88%E7%8E%87/">效率</a>
+              <a href="/tags/%E6%95%88%E7%8E%87/">#效率</a>
             
           </div>
         
@@ -636,7 +666,7 @@
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -655,32 +685,30 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
     </div>
   </div>
 </div>
+
     
 
     
   </main>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-    
-  </div>
+  <footer>
+    <div class="footer-inner">
   
-
   
-
   
-</footer>
+  
+</div>
 
+  </footer>
 
-  <!-- SCRIPTS -->
+  <!-- Scripts -->
   
   <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
@@ -696,11 +724,26 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
 
 
   
@@ -709,66 +752,22 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-      typing(title)
-      
-    })(window, document);
-  </script>
-
-
 
   <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
-  </script>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
 <script  src="/js/boot.js" ></script>
 
 
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
